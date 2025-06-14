@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const items2 = [
           { src: './image/men-baft.png', alt: 'بافت', caption: 'بافت' },
           { src: './image/c1.png', alt: 'کراپ', caption: 'کراپ' },
-          { src: './image/men-Tshirt.png', alt: 'تیشرت', caption: 'تیشرت' },
+          { src: './image/pngtree-premium-black-t-shirt-mockup-png-image_14226805.png', alt: 'تیشرت', caption: 'تیشرت' },
           { src: './image/pants.png', alt: 'شلوار', caption: 'شلوار' },
           { src: './image/C.png', alt: 'کت', caption: 'کت' },
           { src: './image/A.png', alt: 'اکسسوری', caption: 'اکسسوری' },            
