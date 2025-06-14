@@ -1,0 +1,85 @@
+import React, { useState } from 'react';
+
+import Card from './Card';
+
+
+const Cards=()=> {
+
+  
+    
+        const myCards=[
+            {capacity:"500 گیگابایت فضا",limited:"محدودیت یکساله",supported:"دارای پشتیبانی 24 ساعته"},
+            {capacity:"2 ترابایت فضا",limited:"بدون محدودیت",supported:"دارای پشتیبانی 24 ساعته"},
+            {capacity:"10 ترابایت فضا",limited:"بدون محدودیت",supported:"دارای پشتیبانی 24 ساعته"},
+            {capacity:"10 ترابایت فضا",limited:"بدون محدودیت",supported:"دارای پشتیبانی 24 ساعته"},
+            
+
+        ]
+
+
+        
+        return(
+                <section className='w-full py-[10rem]  px-4 bg-white'dir='rtl'>
+
+                    <article className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 '>
+
+                        {myCards.map(   (item)=>(
+                            <Card data={item}/>
+                        ))   }
+                    </article>
+                </section>
+        ) 
+    
+};
+
+
+
+export default Cards;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+import { FaCheck } from "react-icons/fa6";
+import { HiUser } from "react-icons/hi2";
+import { FaUserFriends } from "react-icons/fa";
+import { PiUsersFourDuotone } from "react-icons/pi";
+const Card = ({data}) => {
+  return (
+    <div className='w-full shadow-xl flex flex-col p-4 my-8 rounded-lg hover:scale-105 duration-100'>
+                           
+                          <HiUser className=' mx-auto mt-[-2rem]  bg-transparent' src={FaCheck} alt="" size={40}/>
+                         
+                            <h2 className='text-2xl font-bold text-center py-8'>{data.capacity} </h2>
+                            <p className='text-center text-4xl font-bold'>{data.limited}</p>
+                            <div className='text-center font-medium'>
+                             {data.supported}
+                            </div>
+                            <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>شروع کنید به صورت رایگان</button>
+                          
+                        </div>
+                       
+  )
+}
+
+export default Card

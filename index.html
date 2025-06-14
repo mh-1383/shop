@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="icon" type="image/png" href="./image/c1.png" sizes="32x32">
+</head>
+
+<body dir="rtl">
+
+  
+    <div class="w-full  h-auto  	">
+   
+    <nav class="text-gray-800 p-3 bg-slate-900 backdrop-blur-xl bg-opacity-80   w-full  fixed top-0  z-[1000]  ">
+        <ul class=" flex justify-evenly items-center flex-wrap   max-md:hidden     ">
+            <img src="./image/logo.jpg" alt="" class="w-[70px] h-[70px] rounded-full ">
+                                 
+        <li class=" text-white  border-b-[4px]  border-b-blue-500  flex items-center gap-2  "><i class="fas fa-home  text-1xl  "></i><a href="">صفحه اصلی</a></li>
+        <li class=" text-white hover:border-b-[4px]  border-b-blue-500  flex items-center  gap-2  ease-in duration-200"><i class="fas fa-store  text-1xl  "></i><a href="">فروشگاه</a></li>
+        <li class=" text-white  hover:border-b-[4px]  border-b-blue-500  flex items-center   gap-2  ease-in duration-200"><i class="fas fa-info-circle text-1xl  "></i><a href="">درباره ما</a></li>
+        <li class=" text-white hover:border-b-[4px]  border-b-blue-500  flex items-center   gap-2 ease-in duration-200 "><i class="fas fa-phone-alt  text-1xl  "></i><a href="">تماس با ما</a></li>
+        <li class="text-white">
+          <input type="checkbox" id="mode-toggle" class="hidden" />
+          <label for="mode-toggle" class="cursor-pointer">
+              <i class="fas fa-sun text-yellow-500" id="light-icon"></i>
+              <i class="fas fa-moon text-blue-500 hidden" id="dark-icon"></i>
+          </label>
+      </li>
+        <div class="   flex items-center justify-center gap-[10px]  text-white   ">
+          <div class="flex items-center justify-center w-7 h-7 bg-indigo-700 rounded-full">
+                <i class="fas fa-user text-1xl"></i>
+            </div>
+            <a href="./login signup.html" class="hover:text-yellow-400 font-medium ease-in duration-300 flex gap-2 cursor-pointer" >
+            <p class=" flex items-center ">ورود</p>
+            <p class="cursor-pointer">/</p>
+            <p>ثبت نام</p>
+            </a>
+            <i class="fas fa-heart  text-1xl m-[10px]"></i>
+            <i class="fas fa-shopping-basket text-1xl m-[10px]"></i>
+            <div class=" flex justify-end ">
+              <div class="search-container bg-blue-600">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="دنبال چه میگردید؟" name="search" class="text-black rounded-sm active:bg-slate-400" >
+                  <button type="submit" ><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+                                                
+            </div>
+        </div>
+
+      </ul>
+
+       <div class="md:hidden   w-full flex items-center justify-around ">
+         <span class="hidden w-[5px] h-auto max-md:block  z-[995]" id="hamberbtn"><i class="fas fa-bars text-2xl text-cyan-700 cursor-pointer mr-1 p-5"></i></span>
+         <img src="./image/logo.jpg" alt="" class="w-[70px] h-[70px] rounded-full m-auto">
+         <ul>
+         <li class="text-white  ">
+          <input type="checkbox" id="mode-toggle" class="hidden" />
+          <label for="mode-toggle" class="cursor-pointer">
+              <i class="fas fa-sun text-yellow-500" id="light-icon"></i>
+              <i class="fas fa-moon text-blue-500 hidden" id="dark-icon"></i>
+          </label>
+      </li>
+    </ul>
+        </div>
+        
+                          
+    </nav>    
+
+    <div id="black" class="w-full fixed h-full bg-[#000] opacity-[0.8] z-[1000] right-0 top-0 hidden "></div>
+     <div id="navigation" class=" fixed   right-0 top-0 z-[1000] bg-slate-900  w-[75%] h-full    md:hidden max-md:hidden" >
+            
+            <ul class="hidden-nav   ">
+              <img src="./image/logo.jpg" alt="" class="w-[70px] h-[70px] rounded-full m-auto">
+              <li class="  text-blue-600 text-center mt-16   "><i class="fas fa-home  text-1xl  "></i><a href="">صفحه اصلی</a></li>
+              <li class=" hover:text-blue-400 text-white text-center mt-16    ease-in duration-200"><i class="fas fa-store  text-1xl  "></i><a href="">فروشگاه</a></li>
+              <li class=" hover:text-blue-400  text-white text-center mt-16   ease-in duration-200"><i class="fas fa-info-circle text-1xl  "></i><a href="">درباره ما</a></li>
+              <li class=" hover:text-blue-400   text-white text-center mt-16   ease-in duration-200 "><i class="fas fa-phone-alt  text-1xl  "></i><a href="">تماس با ما</a></li>
+                
+              <div class=" w-auto h-auto flex-wrap text-white flex items-center justify-center  gap-[10px]  mt-32   ">
+                <div class="flex items-center justify-center w-7 h-7 bg-indigo-700 rounded-full">
+                  <i class="fas fa-user text-1xl"></i>
+              </div>
+              <a href="" class="hover:bg-teal-500 ease-in duration-300 flex items-center h-[20px]">ورود</a>
+              <span>/</span>
+              <a href="" class="w-[50px] hover:bg-teal-500 ease-in duration-300 ">ثبت نام</a>
+              <i class="fas fa-heart  text-1xl m-[10px]"></i>
+              <i class="fas fa-shopping-basket text-1xl m-[10px]"></i>
+                <div class=" flex justify-end  ">
+                  <div class="search-container bg-blue-600">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="دنبال چه میگردید؟" name="search" class="text-black rounded-sm active:bg-slate-400" >
+                      <button type="submit" ><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+  
+          </ul>
+     </div>
+
+
+      <header class="w-full mt-48  max-md:mb-72">
+       
+        <section class="w-full   flex  items-center justify-evenly mt-9 max-md:flex-col text-center ">
+          <article class="w-[50%] pt-8   p-5  max-md:w-full max-md:h-auto" >
+            <h1 class=" text-white md:text-4xl max-md:text-3xl  ">به فروشگاه ما خوش اومدی!</h1>
+            <p class="mt-10" >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله بزارهای کاربردی می باشد. </p>
+            <div class='flex justify-evenly mt-8'>
+            <button class=" bg-orange-900 text-white rounded-md p-3  ">مشاهده کالکشن ها</button>
+            <button class="  bg-white  text-amber-950 rounded-md p-3 border-dotted border-2 border-amber-950 hover:bg-amber-500 transition-all duration-500 "  >درباره برند ما</button>
+          </div>
+          </article>
+
+          <article class="w-[30%]   max-md:hidden" >
+                <img src="./image/img1.jpg" alt="" class="rounded-s-full bg-cover ">
+          </article>
+
+        </section>
+        <section class=' w-full h-full mt-44    '>
+          <h1 class="text-center text-3xl font-bold text-white w-full  h-[100px] ">دسته بندی محصولات</h1>
+
+          <section id="container" class="  h-[300px] flex flex-wrap justify-evenly  max-md:h-[400px]      ">
+            
+              
+            <article class="w-[100px] h-[100px] bg-slate-600 rounded-md hover:mt-14 mt-16 shadow-slate-600 shadow-xl p-2 max-md:hover:rotate-45 max-md:duration-500   cursor-pointer duration-300 ">
+
+           
+              <img src="${item.src}" alt="${item.alt} ">
+              
+              <figcaption class="text-center text-white mt-7 text-lg  ">${item.caption}</figcaption>
+              
+            </article>
+        </section>
+      </section>
+      </header>
+    
+      <main class="w-full h-[auto]  mt-36  ">
+        <div class="w-full h-auto  flex justify-evenly max-md:flex-col max-md:items-center  ">
+          <h1 class="w-auto h-auto text-3xl text-white text-center font-semibold max-md:h-[90px]	">پرفروش ترین محصولات</h1>
+          <button class="w-auto [10%] h-[50px] bg-white  text-amber-950 rounded-md p-1 border-dotted border-2 border-amber-950 hover:bg-orange-400 "  >مشاهده بیشتر</button>
+        </div>
+    
+        <section class="w-full h-auto  mt-24   ">
+
+           <!-- Swiper -->
+          <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper "  id="swiper-products">
+            <!-- کارت‌ها اینجا داینامیک وارد می‌شن -->
+          </div>
+
+          </div>
+
+        </section>
+
+        <div class="w-full h-[30px]  ">
+          <div class="swiper">
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+
+        <section class="bg w-[60%] h-[380px] m-auto bg-red-600 rounded-lg bg-cover mt-20" style="background-image: url(./image/Section.webp);">
+                <div class="bg-black w-full h-full bg-opacity-45 rounded-lg ">
+                  <article class="  w-[40%]  h-full flex flex-col items-center  justify-evenly text-white font-semibold rounded-lg max-md:w-full ">
+                    <p class="text-5xl ">اینستاگرام</h1>
+                    <p class="text-3xl ">Web Shop</h2>
+                    <h3 class="text-3xl ">داشته باشید</h3>
+                    <span ><i>mh-hossein83@</i></span>
+                  </article>
+                </div>            
+        </section>
+
+        <section class="w-full  mt-20">
+          <div class="w-full   flex justify-evenly max-md:flex-col max-md:items-center  ">
+            <h1 class="w-auto h-[100px] text-3xl text-white text-center font-semibold	">جدید ترین محصولات</h1>
+            <button class="w-auto [10%] h-[50px] bg-white  text-amber-950 rounded-md p-1 border-dotted border-2 border-amber-950 hover:bg-orange-400 "  >مشاهده بیشتر</button>
+          </div>
+          
+            <section class="w-[80%]  m-auto flex justify-center gap-[15px] mt-12 flex-wrap  " id="C-product">
+           
+            
+    
+            </section>
+         
+        </section>
+       
+
+      </main>
+      
+      <button id="back-to-top" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+      
+      
+        <footer class="w-full h-auto bg-slate-950 mt-10 flex flex-col  items-center  ">
+
+          <section class="w-[400px] h-auto  ">
+            <article class="w-full h-full  flex items-center flex-col justify-around  ">
+              <div class="w-full h-[200px]  flex flex-col justify-center items-center" >
+                <img src="./image/logo.jpg" alt="" class="w-[150px] h-[150px] rounded-full">
+              </div>
+              <p class="w-full h-auto  text-white text-center font-bold text-2xl">تجربه یک خرید متفاوت!</p>
+
+              <ul class="flex justify-evenly  w-full h-[100px] ">
+                <li class=" text-white flex items-center gap-2  "><i class="fas fa-home  text-1xl  "></i><a href="">صفحه اصلی</a></li>
+                <li class=" text-white flex items-center  gap-2  ease-in duration-200"><i class="fas fa-store  text-1xl  "></i><a href="">فروشگاه</a></li>
+                <li class=" text-white  flex items-center  gap-2  ease-in duration-200"><i class="fas fa-info-circle text-1xl  "></i><a href="">درباره ما</a></li>
+                <li class=" text-white flex items-center  gap-2 ease-in duration-200 "><i class="fas fa-phone-alt  text-1xl  "></i><a href="">تماس با ما</a></li>
+               
+              </ul>
+            </article>
+           
+           
+          </section>
+        </footer>
+    </div>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+
+        grabCursor: true,
+
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          "@1.50": {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
+
+
+</body>
+</html>
